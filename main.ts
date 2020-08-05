@@ -1,6 +1,8 @@
 let prediction = ""
+input.onButtonPressed(Button.A, function () {
+    serial.writeLine("mb-tx")
+})
 basic.forever(function () {
-    basic.pause(2000)
     prediction = serial.readLine()
     basic.showString(prediction)
 })
