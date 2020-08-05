@@ -11,6 +11,14 @@ input.onButtonPressed(Button.B, function () {
 })
 basic.forever(function () {
     prediction = serial.readLine()
-    basic.showString(prediction)
+    if (prediction == "Go") {
+        basic.showIcon(IconNames.Yes)
+    } else {
+        if (prediction == "No Go") {
+            basic.showIcon(IconNames.No)
+        } else {
+            basic.showString("e")
+        }
+    }
     basic.clearScreen()
 })
