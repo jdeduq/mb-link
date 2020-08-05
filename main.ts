@@ -7,8 +7,7 @@ basic.forever(function () {
         if (prediction == "No Go") {
             basic.showIcon(IconNames.No)
         } else {
-            basic.showString("e")
+            basic.clearScreen()
         }
     }
-    basic.clearScreen()
 })
